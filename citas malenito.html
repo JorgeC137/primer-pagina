@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+        <script>
+            function confirmacion() {
+            var respuesta=confirm("¿deseas enviar esta informacion?");
+            if(respuesta==true){
+            return true;
+        } else {
+                return false;
+            }
+            }
+        </script>
+        
+<body style="background-color:cyan;">
+    <h2 align="center">dejanos tus datos</h2>
+    <div align="center">
+    <form action="message.php" method="POST">
+        
+            <input type="radio" name="tittle" id="Sr">
+            <label for="Sr">Sr</label>
+            <input type="radio" name="tittle" id="Sra">
+            <label for="Sr">Sra</label>
+            <input type="radio" name="tittle" id="Srta">
+            <label for="Sr">Srta</label>
+            <input type="radio" name="tittle" id="Srto">
+            <label for="Sr">Srto</label>
+        
+        
+        <input type="text" id="nombre" placeholder="john smith">
+        <label for="nombre">nombre y apellido</label>
+        
+        <input type="text" id="email" placeholder="ejemplo123@dominio.com">
+        <label for="email">email</label>
+        
+        <input type="text" id="celular" placeholder="3123456789">
+        <label for="celular">numero celular</label>
+
+        <input type="submit" name="enviar" value="enviar" onclick="return confirmacion()"> 
+    </div>
+        
+    </form>
+</body>
+
+</html>
